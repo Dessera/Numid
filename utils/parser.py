@@ -21,6 +21,12 @@ class GlobalArgsParser:
             help="path to save model (default: model)",
         )
         self.parser.add_argument(
+            "--figure",
+            type=str,
+            default="figure",
+            help="path to save figure (default: figure)",
+        )
+        self.parser.add_argument(
             "--log_level",
             type=str,
             default="INFO",
