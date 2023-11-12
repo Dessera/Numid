@@ -7,7 +7,6 @@ class NumidModel(torch.nn.Module):
 
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
-        # use 5 layers conv2d
         self.model_stack = torch.nn.Sequential(
             torch.nn.Conv2d(1, 6, 5),
             torch.nn.ReLU(),

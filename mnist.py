@@ -6,19 +6,19 @@ import logging
 
 
 def get_mnist_dataloader(train: bool, args: Namespace) -> DataLoader:
-    """获取FashionMNIST数据集
+    """获取MNIST数据集
 
     Args:
         train (bool): 获取训练集还是测试集
         args (Namespace): 全局的参数集合
 
     Returns:
-        DataLoader: FashionMNIST数据集
+        DataLoader: MNIST数据集
     """
     mode = "train" if train else "test"
     logging.info(f"Loading {mode} FashionMNIST dataset")
     return DataLoader(
-        datasets.FashionMNIST(
+        datasets.MNIST(
             args.data,
             train=train,
             download=True,
